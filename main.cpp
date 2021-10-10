@@ -223,23 +223,33 @@ int main()
 
     // Create a new vector v5;
 
+    vector<int> v5;
 
     // Use the overloaded assignment operator to copy all
     // the elements of v2 into v5.
 
+    v5 = v2;
+    cout << "v5 = v2;\n";
+    cout << "v5 = ";
+    printVector(v5);
 
     // void resize (size_type n);
     // size_type size() const noexcept;
     // Delete the last element of v5 by using the
     // functions resize and size.
 
+    v5.resize(v5.size()-1);
 
     // Call the function printVector to print v5.
 
+    cout << "v5.resize(v5.size()-1);\n";
+    cout << "v5 = ";
+    printVector(v5);
 
     // Create an iterator iterVector5 to point to the
     // first element of v5.
 
+    vector<int>::iterator iterVector5 = v5.begin();
 
     // iterator erase (const_iterator position);
     // Call the function erase to delete the first
@@ -247,9 +257,12 @@ int main()
     // returns an iterator, but if we do not intend to use it,
     // we can ignore it.)
 
+    v5.erase(iterVector5);
 
     // Call the function printVector to print v5 again.
 
+    cout << "v5 = ";
+    printVector(v5);
 
     // iterator erase (const_iterator position);
     // Call the function erase to delete the first
@@ -257,15 +270,20 @@ int main()
     // returns an iterator, but if we do not intend to use it,
     // we can ignore it.)
 
+    v5.erase(iterVector5);
 
     // Call the function printVector to print v5 again.
 
+    cout << "v5 = ";
+    printVector(v5);
 
     // Create a vector of integers named v6 containing
     // numbers from 100 to 105.
     // Using the copy constructor, create a vector
     // named v7, a copy of v6.
 
+    vector<int> v6 = {100, 101, 102, 103, 104, 105};
+    vector<int> v7(v6);
 
     // iterator erase (const_iterator position);
     // iterator insert (const_iterator position,
@@ -274,6 +292,7 @@ int main()
     // in its place, by using an iterator.
     // Note that the function erase returns an iterator
     // that can be used to insert 333 in the right position.
+
 
 
     // Using a range-based FOR loop, print the elements of v7.
