@@ -182,27 +182,44 @@ int main()
     // and function pop_back to remove elements.
     // (Notice that the back function returns a reference.)
 
-
+    cout << "v2 printed in reverse: ";
+    while (!v2.empty())
+    {
+        cout << v2.back() << " ";
+        v2.pop_back();
+    }
+    cout << endl;
 
     // void resize (size_type n, const value_type& val);
     // Use function resize to insert three times number
     // 4 into v2.
 
+    v2.resize(3, 4);
 
     // Call the function printVector to print v2.
 
+    cout << "v2.resize(3, 4); ";
+    printVector(v2);
 
     // const_reference front() const;
     // Use function front to output the first element in v4.
     // (Notice that the front function returns a reference.)
 
+    cout << "First element in v4: ";
+    cout << v4.front() << endl;
 
     // void swap (vector& x);
     // Use function swap to swap v2 with v4.
 
+    v2.swap(v4);
 
     // Call the function printVector to print v2.
 
+    cout << "v2.swap(v4); \n";
+    cout << "v2: ";
+    printVector(v2);
+    cout << "v4: ";
+    printVector(v4);
 
     // Create a new vector v5;
 
