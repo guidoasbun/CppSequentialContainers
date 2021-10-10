@@ -293,10 +293,13 @@ int main()
     // Note that the function erase returns an iterator
     // that can be used to insert 333 in the right position.
 
-
+    v7.insert(v7.erase(v7.begin()+3), 333);
 
     // Using a range-based FOR loop, print the elements of v7.
-
+    cout << "v7 = ";
+    for (int elem:v7)
+        cout << elem << " ";
+    cout << endl;
 
     /***************************************************************
             LISTS
@@ -308,51 +311,86 @@ int main()
     // Use the default constructor to create three lists
     // of integers, intList1, intList2, and intList3.
 
+    list<int> intList1;
+    list<int> intList2;
+    list<int> intList3;
 
     // void push_back (const value_type& val);
     // Use the function push_back to insert the following
     // values in the first list: 23 58 58 58 36 15 15 93 98 58
 
+    intList1.push_back(23);
+    intList1.push_back(58);
+    intList1.push_back(58);
+    intList1.push_back(58);
+    intList1.push_back(36);
+    intList1.push_back(15);
+    intList1.push_back(15);
+    intList1.push_back(93);
+    intList1.push_back(98);
+    intList1.push_back(58);
 
     // Call function printList to print intList1.
 
+    cout << "intList1 = ";
+    printList(intList1);
 
     // Using the overloaded assignment operator,
     // copy elements of intList1 into intList2.
 
+    intList2 = intList1;
 
     // Call function printList to print intList2.
 
+    cout << "intList2 = ";
+    printList(intList2);
 
     // void sort();
     // Using function sort, sort all elements in the second list.
 
+    intList2.sort();
 
     // Call function printList to print intList2.
 
+    cout << "intList2 = ";
+    printList(intList2);
 
     // void unique();
     // Using function unique, remove all consecutive
     // duplicates in the list.
 
+    intList2.unique();
 
     // Call function printList to print intList2.
 
+    cout << "intList2 = ";
+    printList(intList2);
 
     // void push_back (const value_type& val);
     //Insert the following elements in the third list:
     //  13 23 25 136 198
 
+    intList3.push_back(13);
+    intList3.push_back(23);
+    intList3.push_back(25);
+    intList3.push_back(135);
+    intList3.push_back(198);
 
     // Call function printList to print intList3.
 
+    cout << "intList3 = ";
+    printList(intList3);
 
     // void merge (list& x);
     // Add to the second list all elements of the third list.
     // --> This is ONE statement only.
 
+    intList2.merge(intList3);
 
     // Call function printList to print intList2.
+
+    cout << "intList2 = ";
+    printList(intList2);
 
     /***************************************************************
     *		Create statements using the functions below.
@@ -363,6 +401,8 @@ int main()
     cout << "\n  ***  OTHER FUNCTIONS  ***  \n\n";
 
     // list: void assign (size_type n, const value_type& val);
+
+
 
     // vector: void assign (InputIterator first, InputIterator last);
 
