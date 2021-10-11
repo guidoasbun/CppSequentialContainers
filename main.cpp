@@ -402,9 +402,14 @@ int main()
 
     // list: void assign (size_type n, const value_type& val);
 
-
+    list<int> intList4;
+    intList4.assign(3, 23);
+    cout << "intList4 = ";
+    printList(intList4);
 
     // vector: void assign (InputIterator first, InputIterator last);
+
+
 
     // list: const_reference back() const;
     // (Notice that this back function returns a reference.)
